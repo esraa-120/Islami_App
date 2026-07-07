@@ -49,12 +49,24 @@ class $AssetsImagesGen {
   AssetGenImage get background =>
       const AssetGenImage('assets/images/background.png');
 
+  /// File path: assets/images/bottom_decoration_img.png
+  AssetGenImage get bottomDecorationImg =>
+      const AssetGenImage('assets/images/bottom_decoration_img.png');
+
   /// File path: assets/images/hadith_bg.png
   AssetGenImage get hadithBg =>
       const AssetGenImage('assets/images/hadith_bg.png');
 
   /// File path: assets/images/header.png
   AssetGenImage get header => const AssetGenImage('assets/images/header.png');
+
+  /// File path: assets/images/left_corner_img.png
+  AssetGenImage get leftCornerImg =>
+      const AssetGenImage('assets/images/left_corner_img.png');
+
+  /// File path: assets/images/most_recent_img.png
+  AssetGenImage get mostRecentImg =>
+      const AssetGenImage('assets/images/most_recent_img.png');
 
   /// File path: assets/images/quran_bg.png
   AssetGenImage get quranBg =>
@@ -64,6 +76,10 @@ class $AssetsImagesGen {
   AssetGenImage get radioBg =>
       const AssetGenImage('assets/images/radio_bg.png');
 
+  /// File path: assets/images/right_corner_img.png
+  AssetGenImage get rightCornerImg =>
+      const AssetGenImage('assets/images/right_corner_img.png');
+
   /// File path: assets/images/sebha_bg.png
   AssetGenImage get sebhaBg =>
       const AssetGenImage('assets/images/sebha_bg.png');
@@ -72,18 +88,27 @@ class $AssetsImagesGen {
   AssetGenImage get splashImg =>
       const AssetGenImage('assets/images/splash_img.png');
 
+  /// File path: assets/images/sur_number_frame_img.png
+  AssetGenImage get surNumberFrameImg =>
+      const AssetGenImage('assets/images/sur_number_frame_img.png');
+
   /// File path: assets/images/time_bg.png
   AssetGenImage get timeBg => const AssetGenImage('assets/images/time_bg.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
     background,
+    bottomDecorationImg,
     hadithBg,
     header,
+    leftCornerImg,
+    mostRecentImg,
     quranBg,
     radioBg,
+    rightCornerImg,
     sebhaBg,
     splashImg,
+    surNumberFrameImg,
     timeBg,
   ];
 }
