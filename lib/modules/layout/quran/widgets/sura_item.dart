@@ -31,18 +31,20 @@ class SuraItem extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 25),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                suraDataModel.suraNameEN,
-                style: textTheme.titleLarge?.copyWith(color: Colors.white),
-              ),
-              Text(
-                "{${suraDataModel.versesCount}} Verses",
-                style: textTheme.bodyMedium?.copyWith(color: Colors.white),
-              ),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  suraDataModel.suraNameEN,
+                  style: textTheme.titleLarge?.copyWith(color: Colors.white),
+                ),
+                Text(
+                  "{${suraDataModel.versesCount}} Verses",
+                  style: textTheme.bodyMedium?.copyWith(color: Colors.white),
+                ),
+              ],
+            ),
           ),
           Spacer(),
           Text(
