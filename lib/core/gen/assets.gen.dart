@@ -17,12 +17,23 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsFilesGen {
   const $AssetsFilesGen();
 
+  /// Directory path: assets/files/hadith
+  $AssetsFilesHadithGen get hadith => const $AssetsFilesHadithGen();
+
   /// Directory path: assets/files/quran
   $AssetsFilesQuranGen get quran => const $AssetsFilesQuranGen();
 }
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
+
+  /// File path: assets/icons/background_card_radio_opened.svg
+  SvgGenImage get backgroundCardRadioOpened =>
+      const SvgGenImage('assets/icons/background_card_radio_opened.svg');
+
+  /// File path: assets/icons/background_card_radio_paused.svg
+  SvgGenImage get backgroundCardRadioPaused =>
+      const SvgGenImage('assets/icons/background_card_radio_paused.svg');
 
   /// File path: assets/icons/hadeth_svg.svg
   SvgGenImage get hadethSvg => const SvgGenImage('assets/icons/hadeth_svg.svg');
@@ -41,6 +52,8 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+    backgroundCardRadioOpened,
+    backgroundCardRadioPaused,
     hadethSvg,
     quranSvg,
     radioSvg,
@@ -56,9 +69,21 @@ class $AssetsImagesGen {
   AssetGenImage get background =>
       const AssetGenImage('assets/images/background.png');
 
+  /// File path: assets/images/background_card_radio_opened.png
+  AssetGenImage get backgroundCardRadioOpened =>
+      const AssetGenImage('assets/images/background_card_radio_opened.png');
+
+  /// File path: assets/images/background_card_radio_paused.png
+  AssetGenImage get backgroundCardRadioPaused =>
+      const AssetGenImage('assets/images/background_card_radio_paused.png');
+
   /// File path: assets/images/bottom_decoration_img.png
   AssetGenImage get bottomDecorationImg =>
       const AssetGenImage('assets/images/bottom_decoration_img.png');
+
+  /// File path: assets/images/hadith_background_img.png
+  AssetGenImage get hadithBackgroundImg =>
+      const AssetGenImage('assets/images/hadith_background_img.png');
 
   /// File path: assets/images/hadith_bg.png
   AssetGenImage get hadithBg =>
@@ -74,6 +99,26 @@ class $AssetsImagesGen {
   /// File path: assets/images/most_recent_img.png
   AssetGenImage get mostRecentImg =>
       const AssetGenImage('assets/images/most_recent_img.png');
+
+  /// File path: assets/images/onboarding1_img.png
+  AssetGenImage get onboarding1Img =>
+      const AssetGenImage('assets/images/onboarding1_img.png');
+
+  /// File path: assets/images/onboarding2_img.png
+  AssetGenImage get onboarding2Img =>
+      const AssetGenImage('assets/images/onboarding2_img.png');
+
+  /// File path: assets/images/onboarding3_img.png
+  AssetGenImage get onboarding3Img =>
+      const AssetGenImage('assets/images/onboarding3_img.png');
+
+  /// File path: assets/images/onboarding4_img.png
+  AssetGenImage get onboarding4Img =>
+      const AssetGenImage('assets/images/onboarding4_img.png');
+
+  /// File path: assets/images/onboarding5_img.png
+  AssetGenImage get onboarding5Img =>
+      const AssetGenImage('assets/images/onboarding5_img.png');
 
   /// File path: assets/images/quran_bg.png
   AssetGenImage get quranBg =>
@@ -91,9 +136,21 @@ class $AssetsImagesGen {
   AssetGenImage get sebhaBg =>
       const AssetGenImage('assets/images/sebha_bg.png');
 
+  /// File path: assets/images/sebha_body_img.png
+  AssetGenImage get sebhaBodyImg =>
+      const AssetGenImage('assets/images/sebha_body_img.png');
+
+  /// File path: assets/images/sebha_head_img.png
+  AssetGenImage get sebhaHeadImg =>
+      const AssetGenImage('assets/images/sebha_head_img.png');
+
   /// File path: assets/images/splash_img.png
   AssetGenImage get splashImg =>
       const AssetGenImage('assets/images/splash_img.png');
+
+  /// File path: assets/images/splash_logo.png
+  AssetGenImage get splashLogo =>
+      const AssetGenImage('assets/images/splash_logo.png');
 
   /// File path: assets/images/sur_number_frame_img.png
   AssetGenImage get surNumberFrameImg =>
@@ -105,18 +162,237 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     background,
+    backgroundCardRadioOpened,
+    backgroundCardRadioPaused,
     bottomDecorationImg,
+    hadithBackgroundImg,
     hadithBg,
     header,
     leftCornerImg,
     mostRecentImg,
+    onboarding1Img,
+    onboarding2Img,
+    onboarding3Img,
+    onboarding4Img,
+    onboarding5Img,
     quranBg,
     radioBg,
     rightCornerImg,
     sebhaBg,
+    sebhaBodyImg,
+    sebhaHeadImg,
     splashImg,
+    splashLogo,
     surNumberFrameImg,
     timeBg,
+  ];
+}
+
+class $AssetsFilesHadithGen {
+  const $AssetsFilesHadithGen();
+
+  /// File path: assets/files/hadith/h1.txt
+  String get h1 => 'assets/files/hadith/h1.txt';
+
+  /// File path: assets/files/hadith/h10.txt
+  String get h10 => 'assets/files/hadith/h10.txt';
+
+  /// File path: assets/files/hadith/h11.txt
+  String get h11 => 'assets/files/hadith/h11.txt';
+
+  /// File path: assets/files/hadith/h12.txt
+  String get h12 => 'assets/files/hadith/h12.txt';
+
+  /// File path: assets/files/hadith/h13.txt
+  String get h13 => 'assets/files/hadith/h13.txt';
+
+  /// File path: assets/files/hadith/h14.txt
+  String get h14 => 'assets/files/hadith/h14.txt';
+
+  /// File path: assets/files/hadith/h15.txt
+  String get h15 => 'assets/files/hadith/h15.txt';
+
+  /// File path: assets/files/hadith/h16.txt
+  String get h16 => 'assets/files/hadith/h16.txt';
+
+  /// File path: assets/files/hadith/h17.txt
+  String get h17 => 'assets/files/hadith/h17.txt';
+
+  /// File path: assets/files/hadith/h18.txt
+  String get h18 => 'assets/files/hadith/h18.txt';
+
+  /// File path: assets/files/hadith/h19.txt
+  String get h19 => 'assets/files/hadith/h19.txt';
+
+  /// File path: assets/files/hadith/h2.txt
+  String get h2 => 'assets/files/hadith/h2.txt';
+
+  /// File path: assets/files/hadith/h20.txt
+  String get h20 => 'assets/files/hadith/h20.txt';
+
+  /// File path: assets/files/hadith/h21.txt
+  String get h21 => 'assets/files/hadith/h21.txt';
+
+  /// File path: assets/files/hadith/h22.txt
+  String get h22 => 'assets/files/hadith/h22.txt';
+
+  /// File path: assets/files/hadith/h23.txt
+  String get h23 => 'assets/files/hadith/h23.txt';
+
+  /// File path: assets/files/hadith/h24.txt
+  String get h24 => 'assets/files/hadith/h24.txt';
+
+  /// File path: assets/files/hadith/h25.txt
+  String get h25 => 'assets/files/hadith/h25.txt';
+
+  /// File path: assets/files/hadith/h26.txt
+  String get h26 => 'assets/files/hadith/h26.txt';
+
+  /// File path: assets/files/hadith/h27.txt
+  String get h27 => 'assets/files/hadith/h27.txt';
+
+  /// File path: assets/files/hadith/h28.txt
+  String get h28 => 'assets/files/hadith/h28.txt';
+
+  /// File path: assets/files/hadith/h29.txt
+  String get h29 => 'assets/files/hadith/h29.txt';
+
+  /// File path: assets/files/hadith/h3.txt
+  String get h3 => 'assets/files/hadith/h3.txt';
+
+  /// File path: assets/files/hadith/h30.txt
+  String get h30 => 'assets/files/hadith/h30.txt';
+
+  /// File path: assets/files/hadith/h31.txt
+  String get h31 => 'assets/files/hadith/h31.txt';
+
+  /// File path: assets/files/hadith/h32.txt
+  String get h32 => 'assets/files/hadith/h32.txt';
+
+  /// File path: assets/files/hadith/h33.txt
+  String get h33 => 'assets/files/hadith/h33.txt';
+
+  /// File path: assets/files/hadith/h34.txt
+  String get h34 => 'assets/files/hadith/h34.txt';
+
+  /// File path: assets/files/hadith/h35.txt
+  String get h35 => 'assets/files/hadith/h35.txt';
+
+  /// File path: assets/files/hadith/h36.txt
+  String get h36 => 'assets/files/hadith/h36.txt';
+
+  /// File path: assets/files/hadith/h37.txt
+  String get h37 => 'assets/files/hadith/h37.txt';
+
+  /// File path: assets/files/hadith/h38.txt
+  String get h38 => 'assets/files/hadith/h38.txt';
+
+  /// File path: assets/files/hadith/h39.txt
+  String get h39 => 'assets/files/hadith/h39.txt';
+
+  /// File path: assets/files/hadith/h4.txt
+  String get h4 => 'assets/files/hadith/h4.txt';
+
+  /// File path: assets/files/hadith/h40.txt
+  String get h40 => 'assets/files/hadith/h40.txt';
+
+  /// File path: assets/files/hadith/h41.txt
+  String get h41 => 'assets/files/hadith/h41.txt';
+
+  /// File path: assets/files/hadith/h42.txt
+  String get h42 => 'assets/files/hadith/h42.txt';
+
+  /// File path: assets/files/hadith/h43.txt
+  String get h43 => 'assets/files/hadith/h43.txt';
+
+  /// File path: assets/files/hadith/h44.txt
+  String get h44 => 'assets/files/hadith/h44.txt';
+
+  /// File path: assets/files/hadith/h45.txt
+  String get h45 => 'assets/files/hadith/h45.txt';
+
+  /// File path: assets/files/hadith/h46.txt
+  String get h46 => 'assets/files/hadith/h46.txt';
+
+  /// File path: assets/files/hadith/h47.txt
+  String get h47 => 'assets/files/hadith/h47.txt';
+
+  /// File path: assets/files/hadith/h48.txt
+  String get h48 => 'assets/files/hadith/h48.txt';
+
+  /// File path: assets/files/hadith/h49.txt
+  String get h49 => 'assets/files/hadith/h49.txt';
+
+  /// File path: assets/files/hadith/h5.txt
+  String get h5 => 'assets/files/hadith/h5.txt';
+
+  /// File path: assets/files/hadith/h50.txt
+  String get h50 => 'assets/files/hadith/h50.txt';
+
+  /// File path: assets/files/hadith/h6.txt
+  String get h6 => 'assets/files/hadith/h6.txt';
+
+  /// File path: assets/files/hadith/h7.txt
+  String get h7 => 'assets/files/hadith/h7.txt';
+
+  /// File path: assets/files/hadith/h8.txt
+  String get h8 => 'assets/files/hadith/h8.txt';
+
+  /// File path: assets/files/hadith/h9.txt
+  String get h9 => 'assets/files/hadith/h9.txt';
+
+  /// List of all assets
+  List<String> get values => [
+    h1,
+    h10,
+    h11,
+    h12,
+    h13,
+    h14,
+    h15,
+    h16,
+    h17,
+    h18,
+    h19,
+    h2,
+    h20,
+    h21,
+    h22,
+    h23,
+    h24,
+    h25,
+    h26,
+    h27,
+    h28,
+    h29,
+    h3,
+    h30,
+    h31,
+    h32,
+    h33,
+    h34,
+    h35,
+    h36,
+    h37,
+    h38,
+    h39,
+    h4,
+    h40,
+    h41,
+    h42,
+    h43,
+    h44,
+    h45,
+    h46,
+    h47,
+    h48,
+    h49,
+    h5,
+    h50,
+    h6,
+    h7,
+    h8,
+    h9,
   ];
 }
 
@@ -584,9 +860,7 @@ class $AssetsFilesQuranGen {
   ];
 }
 
-class Assets {
-  const Assets._();
-
+abstract final class Assets {
   static const $AssetsFilesGen files = $AssetsFilesGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();

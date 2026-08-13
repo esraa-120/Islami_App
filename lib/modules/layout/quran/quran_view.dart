@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_app/core/app_routes/app_routes_name.dart';
+import 'package:islamic_app/core/cache/cashed_data.dart';
 import 'package:islamic_app/core/theme/app_colors.dart';
 import 'package:islamic_app/model/sura_data_model.dart';
+import 'package:islamic_app/modules/layout/quran/widgets/most_recently_card_item.dart';
 import 'package:islamic_app/modules/layout/quran/widgets/sura_item.dart';
 
 import '../../../core/gen/assets.gen.dart';
@@ -705,8 +707,57 @@ class QuranView extends StatefulWidget {
 }
 
 class _QuranViewState extends State<QuranView> {
+
+  @override
+  void initState() {
+    super.initState();
+    _loadRecentSura();
+  }
+
+  Future<void> _loadRecentSura() async {
+    final recentNumbers = await CashedData.getRecentSuras();
+    final result = recentNumbers.map((number) =>
+        quranSuras.firstWhere((sura) => sura.suraNumber == number)).toList();
+
+    if (!mounted) return;
+    setState(() {
+      _recentlyData = result;
+    });
+  }
+
+  Future<void> _onOpenSura(SuraDataModel suraDataModel) async {
+
+    /// add to cache
+    CashedData.addSura(suraDataModel.suraNumber);
+    Navigator.pushNamed(context, AppRoutesName.quranDetails,
+        arguments: suraDataModel
+    );
+    _loadRecentSura();
+  }
+
+  void _onSearchChanged(String value) {
+    final query = value.trim().toLowerCase();
+
+    setState(() {
+      if (query.isEmpty) {
+        _filteredList = quranSuras;
+      } else {
+        _filteredList = quranSuras.where((sura) {
+          return (sura.suraNameEN.toLowerCase().contains(query) ||
+              sura.suraNameAR.contains(query)
+          );
+        }).toList();
+      }
+    });
+  }
+
+  List <SuraDataModel> _filteredList = quranSuras;
+
+  List<SuraDataModel> _recentlyData = [];
+
   @override
   Widget build(BuildContext context) {
+
     final TextTheme textTheme = Theme.of(context).textTheme;
 
     return Container(
@@ -726,7 +777,8 @@ class _QuranViewState extends State<QuranView> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
-                  cursorColor: AppColors.textSecondary,
+                  cursorColor: AppColors.primary,
+                  onChanged: _onSearchChanged,
                   decoration: InputDecoration(
                     hintText: "Sura Name",
                     hintStyle: textTheme.bodyLarge,
@@ -755,6 +807,7 @@ class _QuranViewState extends State<QuranView> {
                 ),
               ),
               const SizedBox(height: 20),
+              if (_recentlyData.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
@@ -763,47 +816,22 @@ class _QuranViewState extends State<QuranView> {
                   style: textTheme.bodyLarge,
                 ),
               ),
-              const SizedBox(height: 10),
-              SizedBox(
+              if (_recentlyData.isNotEmpty) const SizedBox(height: 10),
+              if (_recentlyData.isNotEmpty)
+                SizedBox(
                 height: 150,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   itemBuilder: (context, index) {
-                    return Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: AppColors.primary,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text(
-                                "Al-Anbiya",
-                                style: textTheme.headlineSmall,
-                              ),
-                              Text(
-                                "الأنبياء",
-                                style: textTheme.headlineSmall,
-                              ),
-                              Text(
-                                "112 Verses  ",
-                                style: textTheme.bodyMedium,
-                              ),
-                            ],
-                          ),
-                          Assets.images.mostRecentImg.image(),
-                        ],
-                      ),
+                    return MostRecentlyCardItem(
+                      suraDataModel: _recentlyData[index],
                     );
                   },
                   separatorBuilder: (context, index) {
                     return SizedBox(width: 10,);
                   },
-                  itemCount: 4,
+                  itemCount: _recentlyData.length,
                 ),
               ),
               const SizedBox(height: 10),
@@ -823,17 +851,16 @@ class _QuranViewState extends State<QuranView> {
                 physics: const NeverScrollableScrollPhysics(),
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 itemBuilder: (context, index) {
-                  return SuraItem(suraDataModel: quranSuras[index], onTap: () {
-                    Navigator.pushNamed(context, AppRoutesName.quranDetails,
-                        arguments: quranSuras[index]
-                    );
+                  return SuraItem(suraDataModel: _filteredList[index],
+                    onTap: () {
+                      _onOpenSura(_filteredList[index]);
                   },
                   );
                 },
                 separatorBuilder: (BuildContext context, int index) {
                   return Divider(indent: 40, endIndent: 40,);
                 },
-                itemCount: quranSuras.length,
+                itemCount: _filteredList.length,
               ),
             ]
         ),
