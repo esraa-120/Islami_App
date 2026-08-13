@@ -27,6 +27,14 @@ class $AssetsFilesGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/background_card_radio_opened.svg
+  SvgGenImage get backgroundCardRadioOpened =>
+      const SvgGenImage('assets/icons/background_card_radio_opened.svg');
+
+  /// File path: assets/icons/background_card_radio_paused.svg
+  SvgGenImage get backgroundCardRadioPaused =>
+      const SvgGenImage('assets/icons/background_card_radio_paused.svg');
+
   /// File path: assets/icons/hadeth_svg.svg
   SvgGenImage get hadethSvg => const SvgGenImage('assets/icons/hadeth_svg.svg');
 
@@ -44,6 +52,8 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+    backgroundCardRadioOpened,
+    backgroundCardRadioPaused,
     hadethSvg,
     quranSvg,
     radioSvg,
@@ -58,6 +68,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/background.png
   AssetGenImage get background =>
       const AssetGenImage('assets/images/background.png');
+
+  /// File path: assets/images/background_card_radio_opened.png
+  AssetGenImage get backgroundCardRadioOpened =>
+      const AssetGenImage('assets/images/background_card_radio_opened.png');
+
+  /// File path: assets/images/background_card_radio_paused.png
+  AssetGenImage get backgroundCardRadioPaused =>
+      const AssetGenImage('assets/images/background_card_radio_paused.png');
 
   /// File path: assets/images/bottom_decoration_img.png
   AssetGenImage get bottomDecorationImg =>
@@ -82,6 +100,26 @@ class $AssetsImagesGen {
   AssetGenImage get mostRecentImg =>
       const AssetGenImage('assets/images/most_recent_img.png');
 
+  /// File path: assets/images/onboarding1_img.png
+  AssetGenImage get onboarding1Img =>
+      const AssetGenImage('assets/images/onboarding1_img.png');
+
+  /// File path: assets/images/onboarding2_img.png
+  AssetGenImage get onboarding2Img =>
+      const AssetGenImage('assets/images/onboarding2_img.png');
+
+  /// File path: assets/images/onboarding3_img.png
+  AssetGenImage get onboarding3Img =>
+      const AssetGenImage('assets/images/onboarding3_img.png');
+
+  /// File path: assets/images/onboarding4_img.png
+  AssetGenImage get onboarding4Img =>
+      const AssetGenImage('assets/images/onboarding4_img.png');
+
+  /// File path: assets/images/onboarding5_img.png
+  AssetGenImage get onboarding5Img =>
+      const AssetGenImage('assets/images/onboarding5_img.png');
+
   /// File path: assets/images/quran_bg.png
   AssetGenImage get quranBg =>
       const AssetGenImage('assets/images/quran_bg.png');
@@ -98,9 +136,21 @@ class $AssetsImagesGen {
   AssetGenImage get sebhaBg =>
       const AssetGenImage('assets/images/sebha_bg.png');
 
+  /// File path: assets/images/sebha_body_img.png
+  AssetGenImage get sebhaBodyImg =>
+      const AssetGenImage('assets/images/sebha_body_img.png');
+
+  /// File path: assets/images/sebha_head_img.png
+  AssetGenImage get sebhaHeadImg =>
+      const AssetGenImage('assets/images/sebha_head_img.png');
+
   /// File path: assets/images/splash_img.png
   AssetGenImage get splashImg =>
       const AssetGenImage('assets/images/splash_img.png');
+
+  /// File path: assets/images/splash_logo.png
+  AssetGenImage get splashLogo =>
+      const AssetGenImage('assets/images/splash_logo.png');
 
   /// File path: assets/images/sur_number_frame_img.png
   AssetGenImage get surNumberFrameImg =>
@@ -112,17 +162,27 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     background,
+    backgroundCardRadioOpened,
+    backgroundCardRadioPaused,
     bottomDecorationImg,
     hadithBackgroundImg,
     hadithBg,
     header,
     leftCornerImg,
     mostRecentImg,
+    onboarding1Img,
+    onboarding2Img,
+    onboarding3Img,
+    onboarding4Img,
+    onboarding5Img,
     quranBg,
     radioBg,
     rightCornerImg,
     sebhaBg,
+    sebhaBodyImg,
+    sebhaHeadImg,
     splashImg,
+    splashLogo,
     surNumberFrameImg,
     timeBg,
   ];

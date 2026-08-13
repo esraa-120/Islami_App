@@ -13,19 +13,21 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-  ///Flutter lifeCycle
-  /// 1-
+
   @override
   void initState() {
     Timer(
       const Duration(seconds: 3),
-      () => Navigator.pushNamedAndRemoveUntil(
-        context,
-        AppRoutesName.layout,
-        ((route) => false),
-      ),
+          () {
+        if (!mounted) return;
+
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          AppRoutesName.onBoarding,
+              (route) => false,
+        );
+      },
     );
-    super.initState();
   }
 
   @override
